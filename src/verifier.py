@@ -1,6 +1,9 @@
 """Verifies if the model's answer have grounding evidence in the provided context"""
 
 import math
+from nli import nli_entailment_check, NLIModel, EntailmentResult
+
+nli_model= NLIModel()
 
 def numeric_answer(pred, gold, eps=1e-3):
 
@@ -73,15 +76,10 @@ def verify_answer(
     """
     Verifies correctness and grounding of an answer using
     entailment-based verification (AIS / FEVER style).
-
-    Returns factual verdict:
-    - correct_grounded
-    - incorrect_grounded
-    - incorrect_ungrounded
     """
 
     # -----------------------
-    # NUMERIC ANSWERS
+    # NUMERIC ANSWERS (UNCHANGED)
     # -----------------------
     if answer_type == "numeric":
         is_correct = numeric_answer(pred, gold)
@@ -106,24 +104,25 @@ def verify_answer(
         }
 
     # -----------------------
-    # TEXTUAL ANSWERS
+    # TEXTUAL ANSWERS (UPDATED)
     # -----------------------
-    entailment = entailment_check(pred, context, overlap_threshold)
+    entailment = nli_entailment_check(
+        answer=pred,
+        context=context,
+        nli_model=nli_model
+    )
 
-    if entailment is True:
-        # Context entails answer
+    if entailment.label == "entailed":
         is_correct = True
         is_grounded = True
         verdict = "correct_grounded"
 
-    elif entailment is False:
-        # Context contradicts answer
+    elif entailment.label == "contradicted":
         is_correct = False
         is_grounded = True
-        verdict = "incorrect_grounded"
+        verdict = "contradicted"
 
-    else:
-        # Unsupported / hallucinated
+    else:  # unsupported
         is_correct = False
         is_grounded = False
         verdict = "incorrect_ungrounded"
@@ -133,33 +132,9 @@ def verify_answer(
         "is_grounded": is_grounded,
         "verdict": verdict,
         "details": {
-            "verification": "entailment_based",
-            "entailment": entailment
+            "verification": "nli_entailment",
+            "entailment_label": entailment.label,
+            "entailment_confidence": entailment.confidence,
+            "supporting_chunks": entailment.supporting_chunks,
         }
     }
-
-def entailment_check(answer, context, overlap_threshold=0.6):
-    '''Rashkin et.al 2023 entailment based verification
-    Fabri et al., EMNLP  2022'''
-
-    """
-    Weak entailment check inspired by AIS / QAFactEval.
-    Uses grounding + semantic overlap as proxy.
-    """
-
-    if not answer or not context:
-        return None
-
-    answer_tokens = set(str(answer).lower().split())
-    context_tokens = set(context.lower().split())
-
-    if not answer_tokens:
-        return None
-
-    overlap = answer_tokens & context_tokens
-    overlap_ratio = len(overlap) / len(answer_tokens)
-
-    if overlap_ratio >= overlap_threshold:
-        return True  # weakly entailed
-
-    return None

@@ -1,0 +1,77 @@
+[{
+    "name": "entailment_paraphrase_percent",
+    "context": {
+        "pre_text": ["The revenue in 2021 was 93.5 percent."],
+        "post_text": [],
+        "table": []
+    },
+    "answer": "The revenue was 93.5%",
+    "expected_label": "ENTAILMENT"
+}
+, 
+{
+    "name": "contradiction_wrong_value",
+    "context": {
+        "pre_text": ["The revenue in 2021 was 93.5 percent."],
+        "post_text": [],
+        "table": []
+    },
+    "answer": "The revenue was 80%",
+    "expected_label": "CONTRADICTION"
+}
+,
+{
+    "name": "neutral_missing_detail",
+    "context": {
+        "pre_text": ["The revenue in 2021 was 93.5 percent."],
+        "post_text": [],
+        "table": []
+    },
+    "answer": "The revenue increased significantly",
+    "expected_label": "NEUTRAL"
+}
+, {
+    "name": "entailment_year_dropped",
+    "context": {
+        "pre_text": ["The revenue in 2021 was 93.5 percent."],
+        "post_text": [],
+        "table": []
+    },
+    "answer": "Revenue was 93.5 percent",
+    "expected_label": "ENTAILMENT"
+}
+, {
+    "name": "contradiction_wrong_year",
+    "context": {
+        "pre_text": ["The revenue in 2021 was 93.5 percent."],
+        "post_text": [],
+        "table": []
+    },
+    "answer": "The revenue in 2020 was 93.5 percent",
+    "expected_label": "CONTRADICTION"
+}
+, {
+    "name": "contradiction_table_mismatch",
+    "context": {
+        "pre_text": [],
+        "post_text": [],
+        "table": [
+            ["Year", "Revenue"],
+            ["2021", "93.5%"]
+        ]
+    },
+    "answer": "The revenue in 2021 was 85%",
+    "expected_label": "CONTRADICTION"
+}
+, 
+{
+    "name": "neutral_empty_context",
+    "context": {
+        "pre_text": [],
+        "post_text": [],
+        "table": []
+    },
+    "answer": "The revenue was 93.5%",
+    "expected_label": "NEUTRAL"
+}
+]
