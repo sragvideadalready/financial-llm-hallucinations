@@ -30,10 +30,15 @@ def run_mitigation_pipeline(sample_data: Dict) -> Dict:
     )
 
     # --- Mitigation decision ---
-    if verifier_output["is_grounded"]:
+    verdict = verifier_output.get("verdict")
+
+    if verdict == "contradicted":
+        final_label = HALLUCINATED
+    elif verifier_output["is_grounded"]:
         final_label = GROUNDED
     else:
         final_label = HALLUCINATED
+
 
     return {
         "label": final_label,
