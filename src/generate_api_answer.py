@@ -1,11 +1,27 @@
 import json 
 import time 
+import os
 from typing import List, Dict 
-from google import genai
-
-client = genai.Client(api_key="AIzaSyAeU5t1G9S6GfE2kOp2G0SxjESrg8EGV_o")
+from openai import OpenAI
 
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# Retrieve the key
+api_key = os.getenv("OPENAI_API_KEY")
+print(os.getenv("OPENAI_API_KEY"))
+
+
+client = OpenAI()
+
+response = client.responses.create(
+    model="gpt-5.2",
+    input="Write a short bedtime story about a unicorn."
+)
+
+print(response.output_text)
 
 def serialize_context(context: Dict)-> str:
     """Serialize the context dictionary into a JSON string."""
@@ -87,17 +103,22 @@ def write_prompt(question:str, context:Dict)-> str:
     """
     return prompt.strip()
 
-def query_llm(prompt: str) -> str:
-    response = client.models.generate_content(
-    model="gemini-3-flash-preview", contents=prompt
-)
-    return response.text.strip()
+
+
+def query_llm(prompt):
+
+    response = client.responses.create(
+    model="gpt-5.2", 
+    input=prompt
+    )
+    time.sleep(4) 
+    return response.text
 
 
 def generate_api_answer(samples : List[Dict])-> List[Dict]:
     ''' Generate answers for a list of samples using the LLM API.'''
     results=[]
-
+    i=1
     for sample in samples:
         context_text= serialize_context(sample["context"])
         prompt= write_prompt(sample["question"], sample["context"])
@@ -109,10 +130,13 @@ def generate_api_answer(samples : List[Dict])-> List[Dict]:
             "question" : sample["question"],
             "model_answer": model_answer, 
             "answer_type": sample.get("answer_type", "unknown"),
-            "filename": sample["context"].get("filename", "unknown")
+            "context": sample["context"]
         })
 
-        time.sleep(1)  # To respect rate limits
-    
+        time.sleep(3)  # To respect rate limits
+        print(i)
+        print(model_answer)
+        i+=1
     return results
 
+print(query_llm("What is 2 + 2?"))
