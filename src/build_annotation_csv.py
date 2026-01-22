@@ -2,9 +2,9 @@ import json
 import csv
 
 # paths
-MODEL_ANSWERS_PATH = "model_answers_qwen2_math_7b.json"
+MODEL_ANSWERS_PATH = "model_answers_deepseek_r1.json"
 GOLD_ANSWERS_PATH = "data/samples.json"
-OUTPUT_CSV = "hallucination_annotation_qwen2_math_7b.csv"
+OUTPUT_CSV = "hallucination_annotation_deepseek_r1.csv"
 
 # load jsons
 with open(MODEL_ANSWERS_PATH, "r", encoding="utf-8") as f:

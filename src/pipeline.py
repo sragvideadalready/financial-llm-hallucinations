@@ -125,4 +125,8 @@ def run_pipeline(llm_model:str, predicted_labels_path:str, gold_labels_csv_path:
 
 # predict_labels(llm_model= "qwen2-math:7b", samples_path="data/samples.json", model_answers_path="model_answers_qwen2_math_7b.json", output_path="predicted_labels_qwen2_math_7b.jsonl")
 
-run_pipeline(llm_model="qwen2-math:7b", predicted_labels_path="predicted_labels_qwen2_math_7b.jsonl", gold_labels_csv_path="hallucination_annotation_qwen2_math_7b.csv", output_path="results/evaluation_metrics.jsonl")
+# run_pipeline(llm_model="qwen2-math:7b", predicted_labels_path="predicted_labels_qwen2_math_7b.jsonl", gold_labels_csv_path="hallucination_annotation_qwen2_math_7b.csv", output_path="results/evaluation_metrics.jsonl")
+
+# predict_labels(llm_model= "deepseek-r1", samples_path="data/samples.json", model_answers_path="model_answers_deepseek_r1.json", output_path="predicted_labels_deepseek_r1.jsonl")
+
+run_pipeline(llm_model="deepseek-r1", predicted_labels_path="predicted_labels_deepseek_r1.jsonl", gold_labels_csv_path="hallucination_annotation_deepseek_r1.csv", output_path="results/evaluation_metrics.jsonl")
