@@ -1,0 +1,39 @@
+{
+  "model_name": "qwen2.5:7b",
+  "num_samples": 81,
+  "overall_metrics": {
+    "accuracy": 0.9012345679012346,
+    "hallucination_rate": 0.6172839506172839,
+    "error_analysis": {
+      "false_positives": 2,
+      "false_negatives": 6
+    }
+  },
+  "numeric_metrics": {
+    "accuracy": 0.9361702127659575,
+    "hallucination_rate_model": 0.8936170212765957
+  },
+  "textual_metrics": {
+    "accuracy": 0.8529411764705882,
+    "hallucination_rate_model": 0.23529411764705882
+  }
+}{
+  "model_name": "qwen2-math:7b",
+  "num_samples": 81,
+  "overall_metrics": {
+    "accuracy": 0.8395061728395061,
+    "hallucination_rate": 0.6790123456790124,
+    "error_analysis": {
+      "false_positives": 10,
+      "false_negatives": 3
+    }
+  },
+  "numeric_metrics": {
+    "accuracy": 0.9148936170212766,
+    "hallucination_rate_model": 0.9574468085106383
+  },
+  "textual_metrics": {
+    "accuracy": 0.7352941176470589,
+    "hallucination_rate_model": 0.29411764705882354
+  }
+}

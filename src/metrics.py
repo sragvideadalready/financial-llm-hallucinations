@@ -3,19 +3,21 @@
     Metrics are defined at individual claim level and operate 
     relative to the input context provided."""
 from typing import List, Dict
-GROUNDED = "grounded"
-HALLUCINATED = "hallucinated"
+GROUNDED = "GROUNDED"
+HALLUCINATED = "HALLUCINATED"
 
-INTRINSIC= "intrinsic_halu"
-EXTRINSIC = "extrinsic_halu"
+INTRINSIC= "INTRINSIC_HALU"
+EXTRINSIC = "EXTRINSIC_HALU"
 
 def compute_claim_accuracy(pred_labels, true_labels)-> float:
     
     '''
     Accuracy = (1/N) * sum( t̂(x,c) == t(x,c) )
     '''
-    assert len(pred_labels) == len(true_labels)
+    if len(pred_labels) != len(true_labels):
+        raise ValueError("pred_labels and true_labels must have the same length")
     correct= sum(1 for yt, yp in zip(true_labels, pred_labels) if yt == yp)
+
     return correct / len(true_labels) if true_labels else 0.0
 
 def compute_hallucination_rate(true_labels):
@@ -28,36 +30,30 @@ def compute_hallucination_rate(true_labels):
     return hallucinated_count / len(true_labels)
 
 
-def error_type_analysis(true_labels: List[str], pred_labels: List[str]) -> Dict[str, int]:
+def error_type_analysis(
+    true_labels: List[str],
+    pred_labels: List[str]
+) -> Dict[str, int]:
     """
-    Returns counts of FP and FN.
-    FP: grounded → predicted hallucinated
-    FN: hallucinated → predicted grounded
+    False Positive (FP):
+        True label = GROUNDED, Predicted = HALLUCINATED
+    False Negative (FN):
+        True label = HALLUCINATED, Predicted = GROUNDED
     """
-    assert len(true_labels) == len(pred_labels),
+
+    if len(true_labels) != len(pred_labels):
+        raise ValueError("true_labels and pred_labels must have the same length")
 
     fp = 0
     fn = 0
 
-    for yt, yp in zip(true_labels, pred_labels):
-        if yt == GROUNDED and yp == HALLUCINATED:
+    for y_true, y_pred in zip(true_labels, pred_labels):
+        if y_true == GROUNDED and y_pred == HALLUCINATED:
             fp += 1
-        elif yt == HALLUCINATED and yp == GROUNDED:
+        elif y_true == HALLUCINATED and y_pred == GROUNDED:
             fn += 1
 
     return {
         "false_positives": fp,
         "false_negatives": fn
-    }
-
-
-def intrinsic_extrinsic_breakdown(
-    fine_grained_labels: List[str]
-) -> Dict[str, int]:
-    """
-    Input: original annotation labels (intrinsic/extrinsic).
-    """
-    return {
-        INTRINSIC: sum(1 for l in fine_grained_labels if l == INTRINSIC),
-        EXTRINSIC: sum(1 for l in fine_grained_labels if l == EXTRINSIC),
     }

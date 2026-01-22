@@ -1,10 +1,10 @@
 import json 
 from typing import List, Dict
 
-from generate_api_answer import generate_api_answer
+from generate_api_answer import clean_answer, generate_api_answer, write_prompt, query_llm, clean_answer, serialize_context
 
 SAMPLES_PATH= "data/samples.json"
-OUTPUT_PATH= "model_answers.json"
+OUTPUT_PATH= "model_answers_deepseek_r1.json"
 
 def load_samples(path: str) -> List[Dict]:
     """Load samples from a JSON file."""
@@ -27,5 +27,5 @@ def main():
     print(f"Saved model answers to {OUTPUT_PATH}")
 
 if __name__ == "__main__":
-    main()
+   main()
     

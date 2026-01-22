@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from typing import List, Literal, Dict
-
+import torch.nn.functional as F
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
@@ -9,7 +9,10 @@ class EntailmentResult:
     label: Literal["entailed", "contradicted", "unsupported"]
     confidence: float
     supporting_chunks: List[int]
-
+@dataclass
+class NLIResult:
+    label: Literal["entailed", "neutral", "contradicted"]
+    score: float
 class NLIModel:
     def __init__(self, model_name="roberta-large-mnli"):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -24,11 +27,40 @@ class NLIModel:
 
         # roberta-large-mnli label mapping
         self.label_map = {
-            0: "contradicted",  
+            0: "contradiction",  
             1: "neutral",
             2: "entailed",      
         }
+    
+    def predict(self, premise:str, hypothesis:str)->NLIResult:
+        """Run NLI inference on premise and hypothesis. 
+        REturns object with .label and .score
+        """
 
+        inputs= self.tokenizer(
+            premise, 
+            hypothesis, 
+            return_tensors="pt",
+            truncation=True,
+            padding=True
+        )
+
+        inputs= {k:v.to(self.device) for k,v in inputs.items()}
+
+        with torch.no_grad():
+            outputs= self.model(**inputs)
+            logits= outputs.logits
+        
+        probs= F.softmax(logits, dim=-1)[0]
+
+        label_id= torch.argmax(probs).item()
+        label= self.label_map[label_id]
+        score= probs[label_id].item()
+
+        return NLIResult(
+            label= label,
+            score= score
+        )
 def linearize_table(table: List[List[str]])->List[str]:
     '''Coverts a 2D table into linearized string format
     Returns one sentence per row.'''
@@ -63,52 +95,54 @@ def build_context_chunks(context:Dict)->List[str]:
     return [c for c in chunks if c and c.strip()]
 
 
-def nli_entailment_check(answer:str, context:Dict, nli_model:NLIModel, )->EntailmentResult:
-    '''Checks if the answer is entailed by the given context using NLI model.
-    Returns entailed/ neutral/ contradicted label'''
+def nli_entailment_check(
+    answer: str,
+    context: dict,
+    nli_model
+):
+    """
+    Checks if the answer is entailed by the given context using an NLI model.
+    Returns entailed / neutral / contradicted label with confidence.
+    """
 
-    chunks= build_context_chunks(context)
+    chunks = build_context_chunks(context)
 
-    best_entailment= (0.0, None)
-    best_contradiction= (0.0, None)
+    best_entailment = (0.0, None)
+    best_contradiction = (0.0, None)
 
-    for idx, chunk in enumerate(chunks):
-        inputs= nli_model.tokenizer( premise= chunk, hypothesis= answer, truncation= True, padding= True, return_tensors="pt").to(nli_model.device)
+    for chunk in chunks:
+        result = nli_model.predict(
+            premise=chunk,
+            hypothesis=answer
+        )
+        # result.label ∈ {"entailed", "neutral", "contradiction"}
+        # result.score ∈ [0, 1]
 
-        outputs= nli_model.model(**inputs)
-        probs= torch.softmax(outputs.logits, dim=-1).squeeze().cpu().detach().numpy()
+        if result.label == "entailed" and result.score > best_entailment[0]:
+            best_entailment = (result.score, chunk)
 
-        label_id = torch.argmax(probs).item()
-        label = nli_model.label_map[label_id]
-        confidence = probs[label_id].item()
+        elif result.label == "contradicted" and result.score > best_contradiction[0]:
+            best_contradiction = (result.score, chunk)
 
-        if label == "entailed" and confidence > best_entailment[0]:
-            best_entailment= (confidence, idx)
+    # ---- Final decision logic ----
+    if best_entailment[0] > best_contradiction[0]:
+        label = "entailed"
+        confidence = best_entailment[0]
+        supporting_chunks = [best_entailment[1]] if best_entailment[1] else []
 
-        if label == "contradicted" and confidence > best_contradiction[0]:
-            best_contradiction= (confidence, idx)
+    elif best_contradiction[0] > 0:
+        label = "contradicted"
+        confidence = best_contradiction[0]
+        supporting_chunks = [best_contradiction[1]] if best_contradiction[1] else []
 
-        # Aggregate the logic:
-        entailment_threshold= 0.7
-        contradiction_threshold= 0.75
-        if best_entailment[1] is not None and best_entailment[0]> entailment_threshold:
-            return EntailmentResult(
-                label="entailed",
-                confidence= best_entailment[0],
-                supporting_chunks= [best_entailment[1]]
-            )
-        elif best_contradiction[1] is not None and best_contradiction[0]> contradiction_threshold:
-            return EntailmentResult(
-                label="contradicted",
-                confidence= best_contradiction[0],
-                supporting_chunks= [best_contradiction[1]]
-            )
+    else:
+        label = "neutral"
+        confidence = 0.0
+        supporting_chunks = []
+
     return EntailmentResult(
-        label="unsupported",
-        confidence= max(best_entailment[0], best_contradiction[0]),
-        supporting_chunks= []
+        label=label,
+        confidence=confidence,
+        supporting_chunks=supporting_chunks
     )
-
-    
-
 

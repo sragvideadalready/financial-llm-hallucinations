@@ -6,64 +6,74 @@ from nli import nli_entailment_check, NLIModel, EntailmentResult
 nli_model= NLIModel()
 
 def numeric_answer(pred, gold, eps=1e-3):
+    """
+    Detects if numeric answer is within tolerance of gold answer.
 
-    '''detects if numeric answer is 
-    within tolerance of gold answer
-    
     Scale-invariant numeric match
-    Reffered from: T^2 RAGBench Number Match'''
+    Referred from: T^2 RAGBench Number Match
+    """
 
+    def clean_number(x):
+        if isinstance(x, str):
+            x = x.replace("$", "").replace("%", "").replace(",", "").strip()
+        return float(x)
 
     try:
-        pred= abs(float(pred))
-        gold= abs(float(gold))
-    except:
+        pred = abs(clean_number(pred))
+        gold = abs(clean_number(gold))
+    except (ValueError, TypeError):
         return False
-    
-    if pred<eps and gold<eps:
+
+    if pred < eps and gold < eps:
         return True
-    
-    if gold==0:
+    if pred < eps or gold < eps:
         return False
-    
-    ratio= pred/gold
+
+    if gold == 0:
+        return False
+
+    ratio = pred / gold
     scale_adjusted = ratio * (10 ** -round(math.log10(ratio)))
 
     return abs(1 - scale_adjusted) <= eps
-    
-def answer_in_context(pred, context):
 
-    '''detects word to word match of answer in context. 
 
-    Case insensitive match.
-    '''
-    if not pred or not context:
+def answer_matches_gold(pred, gold):
+    """
+    Detects word-to-word match of predicted answer in gold answer.
+
+    Case-insensitive substring match.
+    """
+    if not pred or not gold:
         return False
 
-    answer=str(pred).lower().strip()
-    context= context.lower()
+    pred = str(pred).lower().strip()
+    gold = str(gold).lower().strip()
 
-    return answer in context
+    return pred in gold or gold in pred
 
 
-def token_overlap_grounding(answer, context, threshold=0.5):
 
-    '''detects if answer has sufficient token overlap with context
-    
-    Soft token check'''
+def token_overlap_grounding(pred, gold, threshold=0.5):
+    """
+    Detects if predicted answer has sufficient token overlap with gold answer.
 
-    if not answer or not context:
+    Soft token check.
+    """
+    if not pred or not gold:
         return False
-    
-    answer_tokens= set(str(answer).lower().strip().split())
-    context_tokens= set(str(context).lower().strip().split())
 
-    if not answer_tokens or not context_tokens:
+    pred_tokens = set(str(pred).lower().strip().split())
+    gold_tokens = set(str(gold).lower().strip().split())
+
+    if not pred_tokens or not gold_tokens:
         return False
-    
-    overlap= answer_tokens & context_tokens
-    overlap_ratio= len(overlap) / len(answer_tokens)
+
+    overlap = pred_tokens & gold_tokens
+    overlap_ratio = len(overlap) / len(gold_tokens)
+
     return overlap_ratio >= threshold
+
 
 
 def verify_answer(
@@ -74,67 +84,66 @@ def verify_answer(
     overlap_threshold=0.6
 ):
     """
-    Verifies correctness and grounding of an answer using
-    entailment-based verification (AIS / FEVER style).
+    Verifies answer correctness against gold answer.
+    Uses NLI only as a grounding / support signal.
+    Final verdict is binary: correct / incorrect.
     """
+    #NOT_ANSWERABLE CASE
 
-    # -----------------------
-    # NUMERIC ANSWERS (UNCHANGED)
-    # -----------------------
+    if isinstance(pred, str) and pred.strip().upper() == "NOT_ANSWERABLE":
+        return {
+            "is_correct": False,
+            "verdict": "HALLUCINATED",
+            "details": {
+                "verification": "not_answerable_prediction"
+            }
+        }
+    # NUMERIC ANSWERS
+
     if answer_type == "numeric":
         is_correct = numeric_answer(pred, gold)
-        is_grounded = answer_in_context(pred, context)
-
-        if is_correct and is_grounded:
-            verdict = "correct_grounded"
-        elif is_correct and not is_grounded:
-            verdict = "correct_ungrounded"
-        elif not is_correct and is_grounded:
-            verdict = "incorrect_grounded"
-        else:
-            verdict = "incorrect_ungrounded"
 
         return {
             "is_correct": is_correct,
-            "is_grounded": is_grounded,
-            "verdict": verdict,
+            "verdict": "GROUNDED" if is_correct else "HALLUCINATED",
             "details": {
                 "verification": "numeric_match"
             }
         }
 
-    # -----------------------
-    # TEXTUAL ANSWERS (UPDATED)
-    # -----------------------
+    # TEXTUAL ANSWERS
+
+    #(Gold-based correctness)
+    exact_match = answer_matches_gold(pred, gold)
+    soft_match = token_overlap_grounding(
+        pred,
+        gold,
+        threshold=overlap_threshold
+    )
+
+    is_correct = exact_match or soft_match
+
+    # (NLI-based grounding (auxiliary))
     entailment = nli_entailment_check(
         answer=pred,
         context=context,
         nli_model=nli_model
     )
 
-    if entailment.label == "entailed":
-        is_correct = True
-        is_grounded = True
-        verdict = "correct_grounded"
+    is_grounded = entailment.label == "entailed"
 
-    elif entailment.label == "contradicted":
-        is_correct = False
-        is_grounded = True
-        verdict = "contradicted"
-
-    else:  # unsupported
-        is_correct = False
-        is_grounded = False
-        verdict = "incorrect_ungrounded"
+    # FINAL VERDICT
+    verdict = "GROUNDED" if (is_correct or is_grounded) else "HALLUCINATED"
 
     return {
         "is_correct": is_correct,
-        "is_grounded": is_grounded,
         "verdict": verdict,
         "details": {
-            "verification": "nli_entailment",
-            "entailment_label": entailment.label,
-            "entailment_confidence": entailment.confidence,
-            "supporting_chunks": entailment.supporting_chunks,
+            "verification": "gold_match + nli_support",
+            "exact_match": exact_match,
+            "soft_match": soft_match,
+            "nli_label": entailment.label,
+            "nli_confidence": entailment.confidence,
+            "is_grounded": is_grounded
         }
     }

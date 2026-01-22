@@ -2,26 +2,9 @@ import json
 import time 
 import os
 from typing import List, Dict 
-from openai import OpenAI
+import ollama
 
 
-from dotenv import load_dotenv
-
-load_dotenv()
-
-# Retrieve the key
-api_key = os.getenv("OPENAI_API_KEY")
-print(os.getenv("OPENAI_API_KEY"))
-
-
-client = OpenAI()
-
-response = client.responses.create(
-    model="gpt-5.2",
-    input="Write a short bedtime story about a unicorn."
-)
-
-print(response.output_text)
 
 def serialize_context(context: Dict)-> str:
     """Serialize the context dictionary into a JSON string."""
@@ -43,76 +26,86 @@ def serialize_context(context: Dict)-> str:
 
     return "\n".join(parts)
 
-def write_prompt(question:str, context:Dict)-> str:
-    """Construct the prompt for the API call."""
-    serialized_context=serialize_context(context)
-    prompt=f"""
-    You are an expert data analyst. Use the following context to answer the question.
-    You are answering a question from a financial QA dataset.
-
-    FIRST determine the answer type:
-    - If the answer is NUMERIC → output ONLY the number with units if applicable.
-    - If the answer is TEXT → output a short factual statement.
-
-    STRICT OUTPUT RULES:
-
-    1. NUMERIC ANSWER:
-    - Output ONLY the numeric value.
-    - Units are allowed if needed (%, $, million, billion, years, etc.).
-    - NO sentences.
-    - NO words before or after.
-    - NO explanations.
-    - Examples:
-        93.5%
-        $180 million
-        4.2 years
-    - Don't answer like:
-        "The answer is 93.5%"
-        "Approximately $180 million"
-
-    2. TEXT ANSWER:
-    - Maximum 2 lines (3 lines ONLY if absolutely necessary).
-    - Concise, factual, and direct.
-    - NO introductory phrases.
-    - NO filler words.
-    - NO speculation or reasoning.
-    - NO references to the question.
-    - Example:
-        "Net sales increased due to higher sales volume and favorable product mix."
-        "According to the passage, net sales increased..."
-
-    3. If the answer is not explicitly stated or cannot be determined:
-    - Output exactly:
-        Not stated.
-    IMPORTANT:
-- Do NOT calculate, derive, estimate, or infer values.
-- Do NOT use formulas.
-- Do NOT substitute related metrics (e.g., Tier 1 ratio instead of CET1).
-- The answer MUST be explicitly stated verbatim in the context.
-- If the exact metric or value is not explicitly mentioned, output:
-  Not stated.
-
-    DO NOT violate these rules under any circumstances.
-
-
-    Context:
-    {serialized_context}
-
-    Question:
-    {question}
+def write_prompt(question: str, context: str, answer_type: str) -> str:
     """
+    Constructs a strict prompt based on question type.
+    """
+
+    serialized_context = serialize_context(context)
+
+    standard_prompt=f"""You are answering a financial question using ONLY the provided context.
+
+Rules:
+- You may use values explicitly stated in the context
+- You may perform simple arithmetic using those values
+- You may apply basic financial assumptions (e.g., linear continuation or proportional change) ONLY if necessary
+- Do NOT use any external knowledge
+- Do NOT introduce new facts
+
+Output rules:
+- Return ONLY the final answer
+- NO explanations, NO reasoning text
+"""
+    if answer_type == "numeric":
+            type_prompt= f"""- The answer must be ONLY a numeric value (integer or float).
+            - Output answer without any formatting (e.g., no commas, no currency symbols).
+            - If the answer cannot be determined as a numeric value under these rules, return exactly: NOT_ANSWERABLE"""
+    elif answer_type =="textual":
+            type_prompt= f"""- The answer must be a concise textual response of about 2 lines. 
+            - If the question cannot be answered under these rules, return exactly: NOT_ANSWERABLE"""
+
+    prompt= f"""{standard_prompt}
+
+{type_prompt}
+
+If the context is insufficient to answer the question, respond with exactly: NOT_ANSWERABLE
+
+Context:
+{serialized_context}
+
+Question:
+{question}
+
+"""
+
     return prompt.strip()
 
 
-
-def query_llm(prompt):
-
-    response = client.responses.create(
-    model="gpt-5.2", 
-    input=prompt
+def query_llm(prompt: str) -> str:
+    """
+    Queries Ollama and returns raw text output.
+    """
+    response = ollama.chat(
+        model="deepseek-r1:latest",
+        messages=[{"role": "user", "content": prompt}]
     )
-    time.sleep(4) 
-    return response.text
+    return response["message"]["content"].strip()
+
+import re
+
+def clean_answer(answer: str) -> str:
+    if not answer or not answer.strip():
+        return "NOT_ANSWERABLE"
+
+    text = answer.strip()
+
+    # 1️⃣ If equals exists, keep RHS
+    if "=" in text:
+        text = text.split("=")[-1]
+
+    # 2️⃣ Remove currency symbols and commas
+    text = text.replace("$", "")
+    text = text.replace(",", "")
+
+    # 3️⃣ Extract ALL integers
+    numbers = re.findall(r"-?\d+", text)
+
+    # 4️⃣ If no integer → NOT_ANSWERABLE
+    if not numbers:
+        return "NOT_ANSWERABLE"
+
+    # 5️⃣ Return ONE integer: the LAST one
+    return numbers[-1]
 
 
 def generate_api_answer(samples : List[Dict])-> List[Dict]:
@@ -121,10 +114,12 @@ def generate_api_answer(samples : List[Dict])-> List[Dict]:
     i=1
     for sample in samples:
         context_text= serialize_context(sample["context"])
-        prompt= write_prompt(sample["question"], sample["context"])
+        prompt= write_prompt(sample["question"], sample["context"], sample["answer_type"])
 
         model_answer= query_llm(prompt)
-
+        if sample["answer_type"] == "numeric":
+            model_answer= clean_answer(model_answer)
+            
         results.append({
             "id": sample["id"],
             "question" : sample["question"],
@@ -139,4 +134,3 @@ def generate_api_answer(samples : List[Dict])-> List[Dict]:
         i+=1
     return results
 
-print(query_llm("What is 2 + 2?"))

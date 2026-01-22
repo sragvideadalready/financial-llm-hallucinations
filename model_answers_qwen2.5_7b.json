@@ -1,6 +1,9 @@
 [
   {
     "id": "JPM/2008/page_85.pdf-3",
+    "question": "what was jpmorgan chase & co's common equity tier 1 ( cet1 ) ratio in 2008?",
+    "model_answer": "3",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "jpmorgan chase & co .",
@@ -69,13 +72,13 @@
         ]
       ],
       "filename": "JPM/2008/page_85.pdf"
-    },
-    "question": "what was jpmorgan chase & co's common equity tier 1 ( cet1 ) ratio in 2008?",
-    "answer": "10.94%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "MRO/2007/page_149.pdf-2",
+    "question": "if current development costs increased in 2008 as much as in 2007 , what would the 2008 total be , in millions?",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "supplementary information on oil and gas producing activities ( unaudited ) c o n t i n u e d summary of changes in standardized measure of discounted future net cash flows relating to proved oil and gas reserves ( in millions ) 2007 2006 2005 sales and transfers of oil and gas produced , net of production , transportation and administrative costs $ ( 4887 ) $ ( 5312 ) $ ( 3754 ) net changes in prices and production , transportation and administrative costs related to future production 12845 ( 1342 ) 6648 ."
@@ -176,13 +179,13 @@
         ]
       ],
       "filename": "MRO/2007/page_149.pdf"
-    },
-    "question": "if current development costs increased in 2008 as much as in 2007 , what would the 2008 total be , in millions?",
-    "answer": "2057",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "DVN/2007/page_58.pdf-3",
+    "question": "what percentage of the total oil and gas mmboe comes from canada?",
+    "model_answer": "0",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "the acquisition date is on or after the beginning of the first annual reporting period beginning on or after december 15 , 2008 .",
@@ -269,13 +272,13 @@
         ]
       ],
       "filename": "DVN/2007/page_58.pdf"
-    },
-    "question": "what percentage of the total oil and gas mmboe comes from canada?",
-    "answer": "24.69%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "C/2017/page_328.pdf-1",
+    "question": "what was the percentage cumulative total return for the five year period ended 31-dec-2017 of citi common stock?",
+    "model_answer": "5",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "performance graph comparison of five-year cumulative total return the following graph and table compare the cumulative total return on citi 2019s common stock , which is listed on the nyse under the ticker symbol 201cc 201d and held by 65691 common stockholders of record as of january 31 , 2018 , with the cumulative total return of the s&p 500 index and the s&p financial index over the five-year period through december 31 , 2017 .",
@@ -330,13 +333,13 @@
         ]
       ],
       "filename": "C/2017/page_328.pdf"
-    },
-    "question": "what was the percentage cumulative total return for the five year period ended 31-dec-2017 of citi common stock?",
-    "answer": "93.5%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "UNP/2008/page_77.pdf-1",
+    "question": "as of december 31 , 2008 what was the percent of the total accounts payable and other liabilities that was accrued wages and vacation",
+    "model_answer": "4",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "when we purchase an asset , we capitalize all costs necessary to make the asset ready for its intended use .",
@@ -418,13 +421,13 @@
         ]
       ],
       "filename": "UNP/2008/page_77.pdf"
-    },
-    "question": "as of december 31 , 2008 what was the percent of the total accounts payable and other liabilities that was accrued wages and vacation",
-    "answer": "14.3%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "PNC/2013/page_62.pdf-2",
+    "question": "in millions what was total residential mortgages balance for 2013 and 2012?",
+    "model_answer": "0",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "conditions and changes to regulatory capital requirements under basel iii capital standards .",
@@ -509,13 +512,13 @@
         ]
       ],
       "filename": "PNC/2013/page_62.pdf"
-    },
-    "question": "in millions what was total residential mortgages balance for 2013 and 2012?",
-    "answer": "3576",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "ZBH/2003/page_58.pdf-3",
+    "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+    "model_answer": "7",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "z i m m e r h o l d i n g s , i n c .",
@@ -585,13 +588,13 @@
         ]
       ],
       "filename": "ZBH/2003/page_58.pdf"
-    },
-    "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
-    "answer": "72.83%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "INTC/2013/page_33.pdf-2",
+    "question": "what was the percent of the impairment charges to the net revenue in 2013",
+    "model_answer": "0017269582888888893",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "item 7 .",
@@ -689,13 +692,13 @@
         ]
       ],
       "filename": "INTC/2013/page_33.pdf"
-    },
-    "question": "what was the percent of the impairment charges to the net revenue in 2013",
-    "answer": "0.5%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "ETR/2004/page_213.pdf-2",
+    "question": "what are the deferred fuel cost revisions as a percentage of the increase in fuel cost recovery revenues?",
+    "model_answer": "5938356164383562",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "entergy louisiana , inc .",
@@ -749,13 +752,13 @@
         ]
       ],
       "filename": "ETR/2004/page_213.pdf"
-    },
-    "question": "what are the deferred fuel cost revisions as a percentage of the increase in fuel cost recovery revenues?",
-    "answer": "60.3%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "PM/2014/page_67.pdf-2",
+    "question": "what was the total of euro notes issued in 2014 , in millions of dollars approximately?",
+    "model_answer": "2401",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "our debt issuances in 2014 were as follows : ( in millions ) type face value ( e ) interest rate issuance maturity euro notes ( a ) 20ac750 ( approximately $ 1029 ) 1.875% ( 1.875 % ) march 2014 march 2021 euro notes ( a ) 20ac1000 ( approximately $ 1372 ) 2.875% ( 2.875 % ) march 2014 march 2026 euro notes ( b ) 20ac500 ( approximately $ 697 ) 2.875% ( 2.875 % ) may 2014 may 2029 swiss franc notes ( c ) chf275 ( approximately $ 311 ) 0.750% ( 0.750 % ) may 2014 december 2019 swiss franc notes ( b ) chf250 ( approximately $ 283 ) 1.625% ( 1.625 % ) may 2014 may 2024 u.s .",
@@ -866,13 +869,13 @@
         ]
       ],
       "filename": "PM/2014/page_67.pdf"
-    },
-    "question": "what was the total of euro notes issued in 2014 , in millions of dollars approximately?",
-    "answer": "3098",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "GIS/2012/page_64.pdf-2",
+    "question": "what portion of the total notes payable comes from u.s . commercial paper?",
+    "model_answer": "8",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "62 general mills amounts recorded in accumulated other comprehensive loss unrealized losses from interest rate cash flow hedges recorded in aoci as of may 27 , 2012 , totaled $ 73.6 million after tax .",
@@ -941,13 +944,13 @@
         ]
       ],
       "filename": "GIS/2012/page_64.pdf"
-    },
-    "question": "what portion of the total notes payable comes from u.s . commercial paper?",
-    "answer": "78.3%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "PM/2015/page_127.pdf-4",
+    "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+    "model_answer": "67",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "note 17 .",
@@ -1007,13 +1010,13 @@
         ]
       ],
       "filename": "PM/2015/page_127.pdf"
-    },
-    "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
-    "answer": "-6806",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "CB/2010/page_200.pdf-4",
+    "question": "in 2010 what was the ratio of the statutory capital and surplus to the statutory net income",
+    "model_answer": "8",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "n o t e s t o t h e c o n s o l i d a t e d f i n a n c i a l s t a t e m e n t s 2013 ( continued ) ace limited and subsidiaries excluded from adjusted weighted-average shares outstanding and assumed conversions is the impact of securities that would have been anti-dilutive during the respective years .",
@@ -1078,13 +1081,13 @@
         ]
       ],
       "filename": "CB/2010/page_200.pdf"
-    },
-    "question": "in 2010 what was the ratio of the statutory capital and surplus to the statutory net income",
-    "answer": "4.9\\\\n",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "PNC/2009/page_46.pdf-2",
+    "question": "share of total securities rated bbb/baa or below changed by how many percentage point between 2008 and 2009?",
+    "model_answer": "0",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "market street commitments by credit rating ( a ) december 31 , december 31 ."
@@ -1160,13 +1163,13 @@
         ]
       ],
       "filename": "PNC/2009/page_46.pdf"
-    },
-    "question": "share of total securities rated bbb/baa or below changed by how many percentage point between 2008 and 2009?",
-    "answer": "-1",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "ABMD/2009/page_88.pdf-1",
+    "question": "what are the total contingent payments relating to impella?",
+    "model_answer": "11166667",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "abiomed , inc .",
@@ -1219,13 +1222,13 @@
         ]
       ],
       "filename": "ABMD/2009/page_88.pdf"
-    },
-    "question": "what are the total contingent payments relating to impella?",
-    "answer": "5583331",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "ABMD/2009/page_56.pdf-1",
+    "question": "what are the total contractual commitments , in millions?",
+    "model_answer": "147",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "purchases of short-term marketable securities , net of sales of short-term marketable securities during the quarter .",
@@ -1293,13 +1296,13 @@
         ]
       ],
       "filename": "ABMD/2009/page_56.pdf"
-    },
-    "question": "what are the total contractual commitments , in millions?",
-    "answer": "40294",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "IP/2006/page_32.pdf-1",
+    "question": "in 2006 what percentage of consumer packaging sales were represented by foodservice net sales?",
+    "model_answer": "0",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "earnings for the first quarter of 2007 are expected to be lower than in the fourth quarter of 2006 .",
@@ -1362,13 +1365,13 @@
         ]
       ],
       "filename": "IP/2006/page_32.pdf"
-    },
-    "question": "in 2006 what percentage of consumer packaging sales were represented by foodservice net sales?",
-    "answer": "16%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "STZ/2006/page_68.pdf-1",
+    "question": "what is the current ratio of robert mondavi?",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "c o n s t e l l a t i o n b r a n d s , i n c .",
@@ -1455,13 +1458,13 @@
         ]
       ],
       "filename": "STZ/2006/page_68.pdf"
-    },
-    "question": "what is the current ratio of robert mondavi?",
-    "answer": "1.7",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "AMT/2005/page_85.pdf-1",
+    "question": "what was the increase in long-term debt between 2004 and 2005 in thousands?",
+    "model_answer": "296352",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "american tower corporation and subsidiaries notes to consolidated financial statements 2014 ( continued ) the term of the economic rights agreement is seventy years ; however , tv azteca has the right to purchase , at fair market value , the economic rights from the company at any time during the last fifty years of the agreement .",
@@ -1539,13 +1542,13 @@
         ]
       ],
       "filename": "AMT/2005/page_85.pdf"
-    },
-    "question": "what was the increase in long-term debt between 2004 and 2005 in thousands?",
-    "answer": "296048",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "AAL/2015/page_118.pdf-2",
+    "question": "what were total operating expenses as a percentage of revenue in 2013?",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "table of contents notes to consolidated financial statements of american airlines group inc .",
@@ -1590,13 +1593,13 @@
         ]
       ],
       "filename": "AAL/2015/page_118.pdf"
-    },
-    "question": "what were total operating expenses as a percentage of revenue in 2013?",
-    "answer": "93.8%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "PNC/2009/page_46.pdf-1",
+    "question": "if there were 50 facilities being rated in 2009 , how many were bbb/baa?",
+    "model_answer": "2",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "market street commitments by credit rating ( a ) december 31 , december 31 ."
@@ -1672,13 +1675,13 @@
         ]
       ],
       "filename": "PNC/2009/page_46.pdf"
-    },
-    "question": "if there were 50 facilities being rated in 2009 , how many were bbb/baa?",
-    "answer": "1",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "LMT/2013/page_74.pdf-1",
+    "question": "what was the average number of weighted average common shares outstanding for diluted computations from 2011 to 2013",
+    "model_answer": "2",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "note 2 2013 restructuring charges 2013 actions during 2013 , we recorded charges related to certain severance actions totaling $ 201 million , net of state tax benefits , of which $ 83 million , $ 37 million , and $ 81 million related to our information systems & global solutions ( is&gs ) , mission systems and training ( mst ) , and space systems business segments .",
@@ -1734,13 +1737,13 @@
         ]
       ],
       "filename": "LMT/2013/page_74.pdf"
-    },
-    "question": "what was the average number of weighted average common shares outstanding for diluted computations from 2011 to 2013",
-    "answer": "331.6",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "UNP/2015/page_24.pdf-1",
+    "question": "what was the ratio of the free cash flow to the cash provided by operating activities in 2015",
+    "model_answer": "07134920634920635",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "to , rather than as a substitute for , cash provided by operating activities .",
@@ -1802,13 +1805,13 @@
         ]
       ],
       "filename": "UNP/2015/page_24.pdf"
-    },
-    "question": "what was the ratio of the free cash flow to the cash provided by operating activities in 2015",
-    "answer": "0.07",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "ADBE/2018/page_86.pdf-1",
+    "question": "what is the percentage change in total gross amount of unrecognized tax benefits from 2017 to 2018?",
+    "model_answer": "6692307692307696",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "table of contents adobe inc .",
@@ -1893,13 +1896,13 @@
         ]
       ],
       "filename": "ADBE/2018/page_86.pdf"
-    },
-    "question": "what is the percentage change in total gross amount of unrecognized tax benefits from 2017 to 2018?",
-    "answer": "13.4%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "AMAT/2014/page_18.pdf-2",
+    "question": "what are the total sales reported in 2012 , ( in billion ) ?",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "backlog applied manufactures systems to meet demand represented by order backlog and customer commitments .",
@@ -1971,13 +1974,13 @@
         ]
       ],
       "filename": "AMAT/2014/page_18.pdf"
-    },
-    "question": "what are the total sales reported in 2012 , ( in billion ) ?",
-    "answer": "8.6",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "AMT/2008/page_32.pdf-2",
+    "question": "on february 13 , 2009 what was the market capitalization",
+    "model_answer": "45",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "part ii item 5 .",
@@ -2046,13 +2049,13 @@
         ]
       ],
       "filename": "AMT/2008/page_32.pdf"
-    },
-    "question": "on february 13 , 2009 what was the market capitalization",
-    "answer": "11456267981.5",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "HOLX/2010/page_124.pdf-1",
+    "question": "what percentage of the total estimated purchase price was cash?",
+    "model_answer": "12",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "table of contents hologic , inc .",
@@ -2105,13 +2108,13 @@
         ]
       ],
       "filename": "HOLX/2010/page_124.pdf"
-    },
-    "question": "what percentage of the total estimated purchase price was cash?",
-    "answer": "34%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "BLK/2012/page_37.pdf-2",
+    "question": "what is the long-term retail/hnw in emea as a percentage of the total long-term retail/hnw?",
+    "model_answer": "6",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "retail and hnw investors ( excluding investments in ishares ) retail / hnw long-term aum by asset class & client region december 31 , 2012 ( dollar amounts in millions ) americas emea asia-pacific total ."
@@ -2190,13 +2193,13 @@
         ]
       ],
       "filename": "BLK/2012/page_37.pdf"
-    },
-    "question": "what is the long-term retail/hnw in emea as a percentage of the total long-term retail/hnw?",
-    "answer": "19.3%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "MRO/2015/page_18.pdf-3",
+    "question": "what was total net undeveloped acres expiring for the three year period , in thousands?",
+    "model_answer": "1018",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "in the ordinary course of business , based on our evaluations of certain geologic trends and prospective economics , we have allowed certain lease acreage to expire and may allow additional acreage to expire in the future .",
@@ -2255,13 +2258,13 @@
         ]
       ],
       "filename": "MRO/2015/page_18.pdf"
-    },
-    "question": "what was total net undeveloped acres expiring for the three year period , in thousands?",
-    "answer": "5808",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "AON/2009/page_46.pdf-2",
+    "question": "what is the lowest segment operating income?",
+    "model_answer": "846",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "risk and insurance brokerage services ."
@@ -2316,13 +2319,13 @@
         ]
       ],
       "filename": "AON/2009/page_46.pdf"
-    },
-    "question": "what is the lowest segment operating income?",
-    "answer": "846",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "PNC/2009/page_46.pdf-1",
+    "question": "if there were 50 facilities being rated in 2009 , how many were bbb/baa?",
+    "model_answer": "2",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "market street commitments by credit rating ( a ) december 31 , december 31 ."
@@ -2398,13 +2401,13 @@
         ]
       ],
       "filename": "PNC/2009/page_46.pdf"
-    },
-    "question": "if there were 50 facilities being rated in 2009 , how many were bbb/baa?",
-    "answer": "1",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "RSG/2017/page_138.pdf-1",
+    "question": "in 2017 what was the debt to equity based on the 2017 actual asset allocation",
+    "model_answer": "33",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "republic services , inc .",
@@ -2457,13 +2460,13 @@
         ]
       ],
       "filename": "RSG/2017/page_138.pdf"
-    },
-    "question": "in 2017 what was the debt to equity based on the 2017 actual asset allocation",
-    "answer": "2.33",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "PNC/2011/page_78.pdf-3",
+    "question": "between december 31 , 2011 and december 31 , 2010 , what was the change in the unpaid principal balance outstanding of loans sold as a participant in these programs in billions?",
+    "model_answer": "2",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "the table below reflects the estimated effects on pension expense of certain changes in annual assumptions , using 2012 estimated expense as a baseline .",
@@ -2518,13 +2521,13 @@
         ]
       ],
       "filename": "PNC/2011/page_78.pdf"
-    },
-    "question": "between december 31 , 2011 and december 31 , 2010 , what was the change in the unpaid principal balance outstanding of loans sold as a participant in these programs in billions?",
-    "answer": "0.2",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "JPM/2008/page_85.pdf-4",
+    "question": "assuming a 5% ( 5 % ) rate of return , what would the earnings be ( in millions ) on 2008 total adjusted average assets?",
+    "model_answer": "75",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "jpmorgan chase & co .",
@@ -2593,13 +2596,13 @@
         ]
       ],
       "filename": "JPM/2008/page_85.pdf"
-    },
-    "question": "assuming a 5% ( 5 % ) rate of return , what would the earnings be ( in millions ) on 2008 total adjusted average assets?",
-    "answer": "98345",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "VRTX/2003/page_71.pdf-1",
+    "question": "what percent of the total common stock plans are related to the vertex purchase plan?",
+    "model_answer": "12",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "rights each holder of a share of outstanding common stock also holds one share purchase right ( a \"right\" ) for each share of common stock .",
@@ -2643,13 +2646,13 @@
         ]
       ],
       "filename": "VRTX/2003/page_71.pdf"
-    },
-    "question": "what percent of the total common stock plans are related to the vertex purchase plan?",
-    "answer": "1.1%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "ETR/2011/page_341.pdf-3",
+    "question": "in 2010 what was the net change in net revenue in millions",
+    "model_answer": "6",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "entergy mississippi , inc .",
@@ -2691,13 +2694,13 @@
         ]
       ],
       "filename": "ETR/2011/page_341.pdf"
-    },
-    "question": "in 2010 what was the net change in net revenue in millions",
-    "answer": "18.6",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "EW/2017/page_82.pdf-2",
+    "question": "what percentage of the total purchase price net of cash acquired is ipr&d ?",
+    "model_answer": "1",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "edwards lifesciences corporation notes to consolidated financial statements ( continued ) 7 .",
@@ -2775,13 +2778,13 @@
         ]
       ],
       "filename": "EW/2017/page_82.pdf"
-    },
-    "question": "what percentage of the total purchase price net of cash acquired is ipr&d ?",
-    "answer": "29%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "JPM/2009/page_133.pdf-2",
+    "question": "if there were a 100bp rise in rates , how much more would the impact be on earnings in 2009 vs . 2008?\\\\n",
+    "model_answer": "437",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "jpmorgan chase & co./2009 annual report 131 earnings-at-risk stress testing the var and stress-test measures described above illustrate the total economic sensitivity of the firm 2019s consolidated balance sheets to changes in market variables .",
@@ -2846,13 +2849,13 @@
         ]
       ],
       "filename": "JPM/2009/page_133.pdf"
-    },
-    "question": "if there were a 100bp rise in rates , how much more would the impact be on earnings in 2009 vs . 2008?\\\\n",
-    "answer": "1226",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "AAPL/2004/page_36.pdf-2",
+    "question": "what was the gross margin decline in fiscal 2004 from 2003?",
+    "model_answer": "2",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "net sales of the retail segment grew to $ 1.185 billion during 2004 from $ 621 million and $ 283 million , in 2003 and 2002 , respectively .",
@@ -2911,13 +2914,13 @@
         ]
       ],
       "filename": "AAPL/2004/page_36.pdf"
-    },
-    "question": "what was the gross margin decline in fiscal 2004 from 2003?",
-    "answer": ".2",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "GS/2013/page_152.pdf-2",
+    "question": "what was the change in millions between 2012 and 2013 in currency hedges?",
+    "model_answer": "383",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "notes to consolidated financial statements net investment hedges the firm seeks to reduce the impact of fluctuations in foreign exchange rates on its net investment in certain non- u.s .",
@@ -2966,13 +2969,13 @@
         ]
       ],
       "filename": "GS/2013/page_152.pdf"
-    },
-    "question": "what was the change in millions between 2012 and 2013 in currency hedges?",
-    "answer": "383",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "C/2008/page_102.pdf-2",
+    "question": "what was the change in billions in total capital ( tier 1 and tier 2 ) from 2007 to 2008?",
+    "model_answer": "6",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "mandatorily redeemable securities of subsidiary trusts total mandatorily redeemable securities of subsidiary trusts ( trust preferred securities ) , which qualify as tier 1 capital , were $ 23.899 billion at december 31 , 2008 , as compared to $ 23.594 billion at december 31 , 2007 .",
@@ -3040,13 +3043,13 @@
         ]
       ],
       "filename": "C/2008/page_102.pdf"
-    },
-    "question": "what was the change in billions in total capital ( tier 1 and tier 2 ) from 2007 to 2008?",
-    "answer": "-13.2",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "JPM/2018/page_110.pdf-2",
+    "question": "what was the net change in ending available for sale investment securities from 2017 to 2018?",
+    "model_answer": "28434",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "management 2019s discussion and analysis 78 jpmorgan chase & co./2018 form 10-k treasury and cio overview treasury and cio is predominantly responsible for measuring , monitoring , reporting and managing the firm 2019s liquidity , funding , capital , structural interest rate and foreign exchange risks .",
@@ -3135,13 +3138,13 @@
         ]
       ],
       "filename": "JPM/2018/page_110.pdf"
-    },
-    "question": "what was the net change in ending available for sale investment securities from 2017 to 2018?",
-    "answer": "28434",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "ETR/2008/page_377.pdf-2",
+    "question": "what is the net change in net revenue for entergy texas , inc . during 2007?",
+    "model_answer": "0",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "entergy texas , inc .",
@@ -3208,13 +3211,13 @@
         ]
       ],
       "filename": "ETR/2008/page_377.pdf"
-    },
-    "question": "what is the net change in net revenue for entergy texas , inc . during 2007?",
-    "answer": "39",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "CDNS/2006/page_30.pdf-2",
+    "question": "what is the rate of return of an investment in s&p500 inc from 2001 to 2005?",
+    "model_answer": "15",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "the following graph compares the cumulative 5-year total return to shareholders of cadence design systems , inc . 2019s common stock relative to the cumulative total returns of the s & p 500 index , the nasdaq composite index and the s & p information technology index .",
@@ -3277,13 +3280,13 @@
         ]
       ],
       "filename": "CDNS/2006/page_30.pdf"
-    },
-    "question": "what is the rate of return of an investment in s&p500 inc from 2001 to 2005?",
-    "answer": "11.2%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "UA/2015/page_71.pdf-1",
+    "question": "what was the profit margin in 2015",
+    "model_answer": "4",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "simplify the presentation of deferred income taxes and reduce complexity without decreasing the usefulness of information provided to users of financial statements .",
@@ -3321,13 +3324,13 @@
         ]
       ],
       "filename": "UA/2015/page_71.pdf"
-    },
-    "question": "what was the profit margin in 2015",
-    "answer": "5.8%",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "RSG/2015/page_126.pdf-2",
+    "question": "during 2013 , what was the ratio of the accrued interest $ 1.2 million to the recognized a interest liability interest of $ 17.0 million .",
+    "model_answer": "07058823529411765",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "republic services , inc .",
@@ -3400,13 +3403,13 @@
         ]
       ],
       "filename": "RSG/2015/page_126.pdf"
-    },
-    "question": "during 2013 , what was the ratio of the accrued interest $ 1.2 million to the recognized a interest liability interest of $ 17.0 million .",
-    "answer": "14.2",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "PNC/2009/page_41.pdf-3",
+    "question": "in 2009 what was the ratio of the commercial mortgages at fair value to lower of cost or market \\\\n",
+    "model_answer": "15",
+    "answer_type": "numeric",
     "context": {
       "pre_text": [
         "december 31 , 2009 , $ 397 million of the credit losses related to securities rated below investment grade .",
@@ -3492,13 +3495,13 @@
         ]
       ],
       "filename": "PNC/2009/page_41.pdf"
-    },
-    "question": "in 2009 what was the ratio of the commercial mortgages at fair value to lower of cost or market \\\\n",
-    "answer": "4.18",
-    "answer_type": "numeric"
+    }
   },
   {
     "id": "V/2008/page_17.pdf-1",
+    "question": "Which largest retail electronic payments network?",
+    "model_answer": "visa",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "largest operators of open-loop and closed-loop retail electronic payments networks the largest operators of open-loop and closed-loop retail electronic payments networks are visa , mastercard , american express , discover , jcb and diners club .",
@@ -3621,13 +3624,13 @@
         ]
       ],
       "filename": "V/2008/page_17.pdf"
-    },
-    "question": "Which largest retail electronic payments network?",
-    "answer": "visa is the largest retail electronic payments network in the world",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "DVN/2007/page_58.pdf-2",
+    "question": "What actions were implemented in january 2007?",
+    "model_answer": "In January 2007, the company announced its intent to divest its West African oil and gas assets and terminate operations in West Africa.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "the acquisition date is on or after the beginning of the first annual reporting period beginning on or after december 15 , 2008 .",
@@ -3714,13 +3717,13 @@
         ]
       ],
       "filename": "DVN/2007/page_58.pdf"
-    },
-    "question": "What actions were implemented in january 2007?",
-    "answer": "In January 2007, we announced our intent to divest our west african oil and gas assets and terminate our operations in west africa , including equatorial guinea , cote d 2019ivoire , gabon and other countries in the region",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "PNC/2013/page_207.pdf-1",
+    "question": "What do derivatives represent?",
+    "model_answer": "Derivatives represent contracts between parties that usually require little or no initial net investment and result in one party delivering cash or another type of asset to the other party based on a notional amount and an underlying as specified in the contract.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "note 17 financial derivatives we use derivative financial instruments ( derivatives ) primarily to help manage exposure to interest rate , market and credit risk and reduce the effects that changes in interest rates may have on net income , fair value of assets and liabilities , and cash flows .",
@@ -3786,13 +3789,13 @@
         ]
       ],
       "filename": "PNC/2013/page_207.pdf"
-    },
-    "question": "What do derivatives represent?",
-    "answer": "derivatives represent contracts between parties that usually require little or no initial net investment and result in one party delivering cash or another type of asset to the other party based on a notional amount and an underlying as specified in the contract",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "PKG/2009/page_65.pdf-4",
+    "question": "What is the company’s assessment regarding the potential financial impact of its ongoing legal actions?",
+    "model_answer": "the company believes it is not reasonably possible that the resolution of these legal actions will, individually or in the aggregate, have a material adverse effect on its financial position, results of operations, or cash flows.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "purchase commitments the company has entered into various purchase agreements for minimum amounts of pulpwood processing and energy over periods ranging from one to twenty years at fixed prices .",
@@ -3851,13 +3854,13 @@
         ]
       ],
       "filename": "PKG/2009/page_65.pdf"
-    },
-    "question": "What is the company’s assessment regarding the potential financial impact of its ongoing legal actions?",
-    "answer": "The company believes that it is not reasonably possible that the resolution of its legal actions, individually or in the aggregate, will have a material adverse effect on its financial position, results of operations, or cash flows.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "LMT/2013/page_74.pdf-4",
+    "question": "What was the primary purpose of the restructuring plan committed to in November 2013?",
+    "model_answer": "To better align our organization and cost structure and improve the affordability of our products and services given the continued decline in U.S. government spending as well as the rapidly changing competitive and economic landscape.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "note 2 2013 restructuring charges 2013 actions during 2013 , we recorded charges related to certain severance actions totaling $ 201 million , net of state tax benefits , of which $ 83 million , $ 37 million , and $ 81 million related to our information systems & global solutions ( is&gs ) , mission systems and training ( mst ) , and space systems business segments .",
@@ -3913,13 +3916,13 @@
         ]
       ],
       "filename": "LMT/2013/page_74.pdf"
-    },
-    "question": "What was the primary purpose of the restructuring plan committed to in November 2013?",
-    "answer": "The restructuring plan was intended to close and consolidate certain facilities, reduce the workforce, better align the organization and cost structure, and improve the affordability of products and services in response to declining U.S. government spending and a changing competitive and economic landscape.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "STT/2011/page_83.pdf-1",
+    "question": "How does the company record the credit and non-credit components of other-than-temporary impairment?",
+    "model_answer": "the credit component is recorded in our consolidated statement of income , and the non-credit component is recorded in oci to the extent that we do not intend to sell the security .",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "impairment the following table presents net unrealized losses on securities available for sale as of december 31: ."
@@ -3981,13 +3984,13 @@
         ]
       ],
       "filename": "STT/2011/page_83.pdf"
-    },
-    "question": "How does the company record the credit and non-credit components of other-than-temporary impairment?",
-    "answer": "When other-than-temporary impairment is identified, the credit component is recorded in the consolidated statement of income, while the non-credit component is recorded in other comprehensive income, provided the company does not intend to sell the security.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "AOS/2004/page_11.pdf-2",
+    "question": "How is the new facility different from the old facility?",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "table of contents item 7 2013 management 2019s discussion and analysis of financial condition and results of operations liquidity and capital resources we recorded net earnings of $ 35.4 million or $ 1.18 per share in 2004 , compared with $ 52.2 million or $ 1.76 per share recorded in 2003 and $ 51.3 million or $ 1.86 per share in 2002 .",
@@ -4073,13 +4076,13 @@
         ]
       ],
       "filename": "AOS/2004/page_11.pdf"
-    },
-    "question": "How is the new facility different from the old facility?",
-    "answer": "The new facility differs from the old facility in that it replaced the prior $250 million credit facility, has a later expiration date (June 10, 2009), and is specifically used to back up commercial paper and credit line borrowings, whereas the old facility expired earlier and was terminated in June 2004.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "MSI/2006/page_61.pdf-3",
+    "question": "What was the company’s compliance status with respect to the 5-year credit facility as of December 31, 2006?",
+    "model_answer": "the company was in compliance with the terms of the 5-year credit facility at december 31 , 2006 .",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "53management's discussion and analysis of financial condition and results of operations in order to borrow funds under the 5-year credit facility , the company must be in compliance with various conditions , covenants and representations contained in the agreements .",
@@ -4167,13 +4170,13 @@
         ]
       ],
       "filename": "MSI/2006/page_61.pdf"
-    },
-    "question": "What was the company’s compliance status with respect to the 5-year credit facility as of December 31, 2006?",
-    "answer": "The company was in compliance with the terms of the 5-year credit facility as of December 31, 2006.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "ABMD/2006/page_75.pdf-1",
+    "question": "has the company ever incurred any material costs to defend lawsuits or settle patent infringement claims related to sales transactions ?",
+    "model_answer": "No",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "abiomed , inc .",
@@ -4233,13 +4236,13 @@
         ]
       ],
       "filename": "ABMD/2006/page_75.pdf"
-    },
-    "question": "has the company ever incurred any material costs to defend lawsuits or settle patent infringement claims related to sales transactions ?",
-    "answer": "No, the company has never incurred any material costs to defend lawsuits or settle patent infringement claims related to sales transactions ",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "AMAT/2013/page_18.pdf-2",
+    "question": "What steps does Applied take to reduce the risks of manufacturing and service interruptions?",
+    "model_answer": "Applied seeks to reduce costs and lower the risks of manufacturing and service interruptions by: (1) selecting and qualifying alternate suppliers for key parts; (2) monitoring the financial condition of key suppliers; (3) maintaining appropriate inventories of key parts; (4) qualifying new parts on a timely basis; and (5) locating certain manufacturing operations in close proximity to suppliers and customers.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "backlog applied manufactures systems to meet demand represented by order backlog and customer commitments .",
@@ -4311,13 +4314,13 @@
         ]
       ],
       "filename": "AMAT/2013/page_18.pdf"
-    },
-    "question": "What steps does Applied take to reduce the risks of manufacturing and service interruptions?",
-    "answer": "Applied seeks to reduce manufacturing and service interruption risks by selecting and qualifying alternate suppliers for key parts, monitoring the financial condition of key suppliers, maintaining appropriate inventories of key parts, qualifying new parts on a timely basis, and locating certain manufacturing operations close to suppliers and customers.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "DVN/2014/page_85.pdf-1",
+    "question": "DVN/2014/page_85.pdf-1",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "devon energy corporation and subsidiaries notes to consolidated financial statements 2013 ( continued ) asset divestitures in conjunction with the asset divestitures in 2013 and 2014 , devon removed $ 26 million and $ 706 million of goodwill , respectively , which were allocated to these assets .",
@@ -4362,13 +4365,13 @@
         ]
       ],
       "filename": "DVN/2014/page_85.pdf"
-    },
-    "question": "DVN/2014/page_85.pdf-1",
-    "answer": "Devon wrote off its remaining Canadian goodwill in 2014 because the implied fair value of the goodwill was determined to be zero, largely due to a significant decline in benchmark oil prices following OPEC’s decision not to reduce production targets.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "SPGI/2018/page_74.pdf-1",
+    "question": "What type of document is referenced for S&P Global in the provided context?",
+    "model_answer": "annual report",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "72 s&p global 2018 annual report ."
@@ -4446,13 +4449,13 @@
         ]
       ],
       "filename": "SPGI/2018/page_74.pdf"
-    },
-    "question": "What type of document is referenced for S&P Global in the provided context?",
-    "answer": "The referenced document is S&P Global’s 2018 annual report.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "AMT/2005/page_105.pdf-2",
+    "question": "What tax-related carryforwards did American Tower have available as of December 31, 2005?",
+    "model_answer": "Net federal and state operating loss carryforwards of approximately $2.2 billion and $2.4 billion, respectively.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "american tower corporation and subsidiaries notes to consolidated financial statements 2014 ( continued ) at december 31 , 2005 , the company had net federal and state operating loss carryforwards available to reduce future taxable income of approximately $ 2.2 billion and $ 2.4 billion , respectively .",
@@ -4511,13 +4514,13 @@
         ]
       ],
       "filename": "AMT/2005/page_105.pdf"
-    },
-    "question": "What tax-related carryforwards did American Tower have available as of December 31, 2005?",
-    "answer": "As of December 31, 2005, American Tower had net federal operating loss carryforwards of approximately $2.2 billion and state operating loss carryforwards of approximately $2.4 billion available to reduce future taxable income.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "ETR/2015/page_131.pdf-1",
+    "question": "How are the fair values of Entergy’s long-term debt classified in the fair value hierarchy?",
+    "model_answer": "fair values are classified as level 2 in the fair value hierarchy.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "entergy corporation and subsidiaries notes to financial statements ( a ) consists of pollution control revenue bonds and environmental revenue bonds , some of which are secured by collateral first mortgage bonds .",
@@ -4571,13 +4574,13 @@
         ]
       ],
       "filename": "ETR/2015/page_131.pdf"
-    },
-    "question": "How are the fair values of Entergy’s long-term debt classified in the fair value hierarchy?",
-    "answer": "The fair values of Entergy’s long-term debt are classified as Level 2 in the fair value hierarchy and are based on prices derived from benchmark yields and reported trades.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "PM/2017/page_38.pdf-3",
+    "question": "What portion of Philip Morris’s reduced-risk product net revenues in 2017 came from IQOS devices and accessories?",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "net revenues include $ 3.8 billion in 2017 and $ 739 million in 2016 related to the sale of rrps , mainly driven by japan .",
@@ -4638,13 +4641,13 @@
         ]
       ],
       "filename": "PM/2017/page_38.pdf"
-    },
-    "question": "What portion of Philip Morris’s reduced-risk product net revenues in 2017 came from IQOS devices and accessories?",
-    "answer": "Approximately $0.9 billion of the reduced-risk product net revenues in 2017 came from IQOS devices and accessories.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "HOLX/2015/page_98.pdf-2",
+    "question": "What information does the referenced table in the Holx 2015 report provide?",
+    "model_answer": "The referenced table provides the estimated amortization expense for each of the five succeeding fiscal years starting from fiscal 2016 to fiscal 2020.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "table of contents the estimated amortization expense at september 26 , 2015 for each of the five succeeding fiscal years was as follows: ."
@@ -4702,13 +4705,13 @@
         ]
       ],
       "filename": "HOLX/2015/page_98.pdf"
-    },
-    "question": "What information does the referenced table in the Holx 2015 report provide?",
-    "answer": "The table provides the estimated amortization expense for each of the five succeeding fiscal years as of September 26, 2015.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "ETR/2017/page_114.pdf-2",
+    "question": "What does the table referenced in the context report?",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "payments ( receipts ) ( in millions ) ."
@@ -4765,13 +4768,13 @@
         ]
       ],
       "filename": "ETR/2017/page_114.pdf"
-    },
-    "question": "What does the table referenced in the context report?",
-    "answer": "The table reports payments (receipts) measured in millions.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "AES/2016/page_191.pdf-3",
+    "question": "What information is reconciled in the AES 2014 notes to consolidated financial statements?",
+    "model_answer": "The reconciliation of the beginning and ending amounts of unrecognized tax benefits for the periods indicated (in millions) is provided.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "the aes corporation notes to consolidated financial statements 2014 ( continued ) december 31 , 2016 , 2015 , and 2014 the following is a reconciliation of the beginning and ending amounts of unrecognized tax benefits for the periods indicated ( in millions ) : ."
@@ -4863,13 +4866,13 @@
         ]
       ],
       "filename": "AES/2016/page_191.pdf"
-    },
-    "question": "What information is reconciled in the AES 2014 notes to consolidated financial statements?",
-    "answer": "The notes reconcile the beginning and ending amounts of unrecognized tax benefits for the periods indicated.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "ETFC/2007/page_126.pdf-3",
+    "question": "Under what condition does dilution occur in diluted earnings per share calculations?",
+    "model_answer": "dilution will occur for periods when the average market price of the company's common stock for the reporting period is above $ 21.816 .",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "before the purchase in november 2008 , the units will be reflected in diluted earnings per share calculations using the treasury stock method as defined by sfas no .",
@@ -4930,13 +4933,13 @@
         ]
       ],
       "filename": "ETFC/2007/page_126.pdf"
-    },
-    "question": "Under what condition does dilution occur in diluted earnings per share calculations?",
-    "answer": "Dilution occurs when the average market price of the company’s common stock for the reporting period is above $21.816.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "MAS/2012/page_70.pdf-1",
+    "question": "What business segment is associated with the goodwill amounts shown at December 31?",
+    "model_answer": "cabinets and related products",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "masco corporation notes to consolidated financial statements ( continued ) h .",
@@ -5051,13 +5054,13 @@
         ]
       ],
       "filename": "MAS/2012/page_70.pdf"
-    },
-    "question": "What business segment is associated with the goodwill amounts shown at December 31?",
-    "answer": "The goodwill amounts shown at December 31 are associated with the cabinets and related products segment.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "AON/2010/page_28.pdf-1",
+    "question": "Why could Aon’s revenue growth be impaired according to the risk disclosure?",
+    "model_answer": "if we cannot use the internet effectively to deliver our services, our revenue growth and results of operation may be impaired.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "performance and revenue growth depends , in part , on the reliability and functionality of this infrastructure as a means of delivering human resources services .",
@@ -5159,13 +5162,13 @@
         ]
       ],
       "filename": "AON/2010/page_28.pdf"
-    },
-    "question": "Why could Aon’s revenue growth be impaired according to the risk disclosure?",
-    "answer": "Revenue growth could be impaired if the company cannot use the internet effectively to deliver its services.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "AES/2002/page_46.pdf-4",
+    "question": "Where is the company’s common stock traded according to the disclosure?",
+    "model_answer": "on the new york stock exchange (nyse)",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "part ii item 5 2014market for registrant 2019s common equity and related stockholder matters market information .",
@@ -5217,13 +5220,13 @@
         ]
       ],
       "filename": "AES/2002/page_46.pdf"
-    },
-    "question": "Where is the company’s common stock traded according to the disclosure?",
-    "answer": "The company’s common stock is traded on the New York Stock Exchange.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "PM/2015/page_85.pdf-1",
+    "question": "How does the company expect to meet its liquidity requirements?",
+    "model_answer": "the existence of the commercial paper program and the committed credit facilities, coupled with our operating cash flows, will enable us to meet our liquidity requirements.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "in addition to the committed credit facilities discussed above , certain of our subsidiaries maintain short-term credit arrangements to meet their respective working capital needs .",
@@ -5328,13 +5331,13 @@
         ]
       ],
       "filename": "PM/2015/page_85.pdf"
-    },
-    "question": "How does the company expect to meet its liquidity requirements?",
-    "answer": "The company expects to meet its liquidity requirements through the commercial paper program, committed credit facilities, and operating cash flows.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "ETFC/2014/page_26.pdf-2",
+    "question": "What does the performance graph compare for the company’s common stock?",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "the following performance graph shows the cumulative total return to a holder of the company 2019s common stock , assuming dividend reinvestment , compared with the cumulative total return , assuming dividend reinvestment , of the standard & poor ( \"s&p\" ) 500 index and the dow jones us financials index during the period from december 31 , 2009 through december 31 , 2014. ."
@@ -5381,13 +5384,13 @@
         ]
       ],
       "filename": "ETFC/2014/page_26.pdf"
-    },
-    "question": "What does the performance graph compare for the company’s common stock?",
-    "answer": "The performance graph compares the cumulative total return of the company’s common stock with the S&P 500 index and the Dow Jones U.S. Financials Index over the specified period.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "ZBH/2003/page_40.pdf-1",
+    "question": "What operating profit percentage was reported for the Asia Pacific region in the fourth quarter?",
+    "model_answer": "47.1%",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "z i m m e r h o l d i n g s , i n c .",
@@ -5453,13 +5456,13 @@
         ]
       ],
       "filename": "ZBH/2003/page_40.pdf"
-    },
-    "question": "What operating profit percentage was reported for the Asia Pacific region in the fourth quarter?",
-    "answer": "The company reported an operating profit of 47.1 percent of net sales for the Asia Pacific region in the fourth quarter.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "AAPL/2014/page_38.pdf-3",
+    "question": "Why does the company believe it has sufficient liquidity for the next 12 months?",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "table of contents liquidity and capital resources the following table presents selected financial information and statistics as of and for the years ended september 27 , 2014 , september 28 , 2013 and september 29 , 2012 ( in millions ) : the company believes its existing balances of cash , cash equivalents and marketable securities will be sufficient to satisfy its working capital needs , capital asset purchases , outstanding commitments and other liquidity requirements associated with its existing operations over the next 12 months .",
@@ -5535,13 +5538,13 @@
         ]
       ],
       "filename": "AAPL/2014/page_38.pdf"
-    },
-    "question": "Why does the company believe it has sufficient liquidity for the next 12 months?",
-    "answer": "The company believes it has sufficient liquidity because its existing balances of cash, cash equivalents, and marketable securities can satisfy its working capital and other liquidity needs.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "ETR/2003/page_84.pdf-2",
+    "question": "How is the fair value of the debt determined according to the notes?",
+    "model_answer": "NOT_ANSWERABLE",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "entergy corporation notes to consolidated financial statements ( a ) consists of pollution control revenue bonds and environmental revenue bonds , certain series of which are secured by non-interest bearing first mortgage bonds .",
@@ -5597,13 +5600,13 @@
         ]
       ],
       "filename": "ETR/2003/page_84.pdf"
-    },
-    "question": "How is the fair value of the debt determined according to the notes?",
-    "answer": "The fair value of the debt is determined using bid prices reported by dealer markets and nationally recognized investment banking firms.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "LMT/2012/page_47.pdf-3",
+    "question": "What primarily caused the decrease in MST’s net sales in 2011 compared to 2010?",
+    "model_answer": "decreased volume of approximately $ 390 million for certain ship and aviation system programs ( primarily maritime patrol aircraft and ptds ) and approximately $ 75 million for training and logistics solutions programs .",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "2011 compared to 2010 mst 2019s net sales for 2011 decreased $ 311 million , or 4% ( 4 % ) , compared to 2010 .",
@@ -5662,13 +5665,13 @@
         ]
       ],
       "filename": "LMT/2012/page_47.pdf"
-    },
-    "question": "What primarily caused the decrease in MST’s net sales in 2011 compared to 2010?",
-    "answer": "The decrease in net sales was primarily caused by lower volume in certain ship and aviation system programs and training and logistics solutions programs.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "MAS/2018/page_35.pdf-3",
+    "question": "What factors negatively impacted the company’s gross profit margin in 2018?",
+    "model_answer": "The negative impacts on the company's gross profit margin in 2018 were driven by an increase in commodity costs, the recognition of the inventory step up adjustment associated with the acquisition of Kichler, and an increase in other expenses such as logistics costs and salaries.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "divestiture of our arrow and moores businesses , and an unfavorable sales mix of international plumbing products , which , in aggregate , decreased sales by two percent .",
@@ -5739,13 +5742,13 @@
         ]
       ],
       "filename": "MAS/2018/page_35.pdf"
-    },
-    "question": "What factors negatively impacted the company’s gross profit margin in 2018?",
-    "answer": "The 2018 gross profit margin was negatively impacted by higher commodity costs, inventory step-up adjustments from the Kichler acquisition, increased expenses such as logistics and salaries, and an unfavorable sales mix.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "SYY/2019/page_9.pdf-2",
+    "question": "What information does the company estimate regarding its customers?",
+    "model_answer": "The company estimates that its sales by type of customer during the past three fiscal years were restaurants (62% in 2019, 61% in 2017), education government (9% in both 2018 and 2017), travel leisure retail (9% in both 2018 and 2017), healthcare (8% in all years), and other (12% in 2019, 13% in 2017). None of these types of customers exceeded 5% of total sales in any of the presented years.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "sysco corporation a0- a0form a010-k 3 part a0i item a01 a0business we estimate that our sales by type of customer during the past three fiscal years were as follows: ."
@@ -5821,13 +5824,13 @@
         ]
       ],
       "filename": "SYY/2019/page_9.pdf"
-    },
-    "question": "What information does the company estimate regarding its customers?",
-    "answer": "The company estimates its sales by type of customer for the past three fiscal years.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "ETR/2002/page_86.pdf-3",
+    "question": "How is the fair value of Entergy’s debt determined according to the notes?",
+    "model_answer": "The fair value of Entergy’s debt is determined using bid prices reported by dealer markets and by nationally recognized investment banking firms.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "entergy corporation notes to consolidated financial statements ( d ) the bonds are subject to mandatory tender for purchase from the holders at 100% ( 100 % ) of the principal amount outstanding on october 1 , 2003 and will then be remarketed .",
@@ -5874,13 +5877,13 @@
         ]
       ],
       "filename": "ETR/2002/page_86.pdf"
-    },
-    "question": "How is the fair value of Entergy’s debt determined according to the notes?",
-    "answer": "The fair value of the debt is determined using bid prices reported by dealer markets and nationally recognized investment banking firms.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "ZBH/2003/page_58.pdf-1",
+    "question": "When is an impairment loss recognized for an asset according to the notes?",
+    "model_answer": "when estimated future cash flows of centerpulse are less than its carrying amount.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "z i m m e r h o l d i n g s , i n c .",
@@ -5950,13 +5953,13 @@
         ]
       ],
       "filename": "ZBH/2003/page_58.pdf"
-    },
-    "question": "When is an impairment loss recognized for an asset according to the notes?",
-    "answer": "An impairment loss is recognized when estimated future cash flows related to the asset are less than its carrying amount.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "AMT/2010/page_34.pdf-2",
+    "question": "What information is presented in the referenced table about the company’s common stock?",
+    "model_answer": "The table presents reported quarterly high and low per share sale prices of the company's common stock on the New York Stock Exchange for the years 2010 and 2009.",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "part ii item 5 .",
@@ -6023,13 +6026,13 @@
         ]
       ],
       "filename": "AMT/2010/page_34.pdf"
-    },
-    "question": "What information is presented in the referenced table about the company’s common stock?",
-    "answer": "The table presents reported quarterly high and low per-share sale prices of the company’s common stock on the New York Stock Exchange.",
-    "answer_type": "textual"
+    }
   },
   {
     "id": "ETR/2002/page_24.pdf-1",
+    "question": "Why did interest charges decrease in 2002 according to management’s discussion?",
+    "model_answer": "decrease of $ 31.9 million in interest on long-term debt and a decrease of $ 76.0 million in other interest expense",
+    "answer_type": "textual",
     "context": {
       "pre_text": [
         "entergy corporation and subsidiaries management's financial discussion and analysis the decrease in interest income in 2002 was primarily due to : fffd interest recognized in 2001 on grand gulf 1's decommissioning trust funds resulting from the final order addressing system energy's rate proceeding ; fffd interest recognized in 2001 at entergy mississippi and entergy new orleans on the deferred system energy costs that were not being recovered through rates ; and fffd lower interest earned on declining deferred fuel balances .",
@@ -6071,9 +6074,6 @@
         ]
       ],
       "filename": "ETR/2002/page_24.pdf"
-    },
-    "question": "Why did interest charges decrease in 2002 according to management’s discussion?",
-    "answer": "Interest charges decreased primarily due to lower interest on long-term debt following retirements and reduced other interest expense related to prior reserves.",
-    "answer_type": "textual"
+    }
   }
 ]
