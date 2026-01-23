@@ -104,7 +104,7 @@ def nli_entailment_check(
     Checks if the answer is entailed by the given context using an NLI model.
     Returns entailed / neutral / contradicted label with confidence.
     """
-
+    ENTAILEMENT_THRESHOLD = 0.7
     chunks = build_context_chunks(context)
 
     best_entailment = (0.0, None)
@@ -125,7 +125,7 @@ def nli_entailment_check(
             best_contradiction = (result.score, chunk)
 
     # ---- Final decision logic ----
-    if best_entailment[0] > best_contradiction[0]:
+    if best_entailment[0] > best_contradiction[0] and best_entailment[0] > ENTAILEMENT_THRESHOLD:
         label = "entailed"
         confidence = best_entailment[0]
         supporting_chunks = [best_entailment[1]] if best_entailment[1] else []

@@ -2,10 +2,10 @@
   "model_name": "qwen2.5:7b",
   "num_samples": 81,
   "overall_metrics": {
-    "accuracy": 0.9012345679012346,
-    "hallucination_rate": 0.6172839506172839,
+    "accuracy": 0.8888888888888888,
+    "hallucination_rate": 0.6296296296296297,
     "error_analysis": {
-      "false_positives": 2,
+      "false_positives": 3,
       "false_negatives": 6
     }
   },
@@ -14,18 +14,18 @@
     "hallucination_rate_model": 0.8936170212765957
   },
   "textual_metrics": {
-    "accuracy": 0.8529411764705882,
-    "hallucination_rate_model": 0.23529411764705882
+    "accuracy": 0.8235294117647058,
+    "hallucination_rate_model": 0.2647058823529412
   }
 }{
   "model_name": "qwen2-math:7b",
   "num_samples": 81,
   "overall_metrics": {
     "accuracy": 0.8395061728395061,
-    "hallucination_rate": 0.6790123456790124,
+    "hallucination_rate": 0.7037037037037037,
     "error_analysis": {
-      "false_positives": 10,
-      "false_negatives": 3
+      "false_positives": 11,
+      "false_negatives": 2
     }
   },
   "numeric_metrics": {
@@ -34,7 +34,7 @@
   },
   "textual_metrics": {
     "accuracy": 0.7352941176470589,
-    "hallucination_rate_model": 0.29411764705882354
+    "hallucination_rate_model": 0.35294117647058826
   }
 }{
   "model_name": "deepseek-r1",
